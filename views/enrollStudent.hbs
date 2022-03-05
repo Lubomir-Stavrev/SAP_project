@@ -1,0 +1,43 @@
+
+<section>
+    <div class="container">
+        <h1 class="title">Enroll Student</h1>
+        <div>
+            <form action="/enrollStudent" method="POST">
+
+                <div class="row">
+                    <label for="student">Choose student</label>
+                    <br>
+                    <select name="studentId" id="studentId">
+                        {{#if students}}
+                        <div>
+                            {{#each students}}
+                            <option value="{{_id}}">{{name}}</option>
+                            {{/each}}
+                        </div>
+                        {{else}}
+                        <option value="">No students added</option>
+                        {{/if}}
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label for="courseId">Choose course</label>
+                    <br>
+                    <select name="courseId" id="courseId">
+                        {{#if courses}}
+                        <div>
+                            {{#each courses}}
+                            <option value="{{_id}}">{{name}}</option>
+                            {{/each}}
+                        </div>
+                        {{else}}
+                        <option value="">No courses added</option>
+                        {{/if}}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Enroll</button>
+            </form>
+        </div>
+    </div>
+</section>

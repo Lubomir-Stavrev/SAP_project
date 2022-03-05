@@ -1,0 +1,43 @@
+
+<section>
+    <div class="container">
+        <h1 class="title">Add Course</h1>
+        <div>
+            <form action="/addCourse" method="POST">
+
+                <div class="row">
+                    <label for="name">Course name</label>
+                    <br>
+                    <input type="text" class="formInput"
+                        id="name"
+                        name="name">
+                </div>
+                <div class="row">
+                    <label for="courseLead">Teacher name to lead to course</label>
+                    <br>
+                    <select name="courseLead" id="courseLead">
+                        {{#if data}}
+                        <div>
+                            {{#each data}}
+                            <option value="{{_id}}">{{name}}</option>
+                            {{/each}}
+                        </div>
+                        {{else}}
+                        <option value="">No teacher's added</option>
+                        {{/if}}
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="creditAward">Credit award</label>
+                    <br>
+                    <input type="text" class="formInput"
+                        id="creditAward"
+                        name="creditAward">
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+</section>

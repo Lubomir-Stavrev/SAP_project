@@ -1,0 +1,79 @@
+
+<div>
+    <div onclick="showSubContainer(event)" class="container">
+        <div class="title"><h1>Show students</h1></div>
+        <div class="subContainer" style="display:none">
+            {{#each students}}
+            <div>
+                <div class="title">
+                    <h1>{{name}}</h1>
+                    <h1> - {{credits}} credits</h1>
+                </div>
+                {{#if courses}}
+                <div class="coursesContainer">
+                    {{#each courses}}
+                    <span>- {{this.name}}</span>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+    <div onclick="showSubContainer(event)" class="container">
+        <div class="title"><h1>Show teachers</h1></div>
+        <div class="subContainer" style="display:none">
+            {{#each teachers}}
+            <div>
+                <div class="title">
+                    <h1>{{name}}</h1>
+                    <h1> - {{degree}} degree</h1>
+                </div>
+                {{#if courseLeads}}
+                <div class="coursesContainer">
+                    <span>- {{courseLeads.name}} - enrolled students:
+                        {{enrolledStudentsCount}}</span>
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div onclick="showSubContainer(event)" class="container">
+        <div class="title"><h1>Show top 3 teachers</h1></div>
+        <div class="subContainer" style="display:none">
+            {{#each topTeachers}}
+            <div>
+                <div class="title">
+                    <h1>{{name}}</h1>
+                    <h1> - {{degree}} degree</h1>
+                </div>
+                {{#if courseLeads}}
+                <div class="coursesContainer">
+                    <span>- {{courseLeads.name}} - enrolled students:
+                        {{enrolledStudentsCount}}</span>
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div onclick="showSubContainer(event)" class="container">
+        <div class="title"><h1>Show top 3 courses</h1></div>
+        <div class="subContainer" style="display:none">
+            {{#each topCourses}}
+            <div>
+                <div class="title">
+                    <h1>{{name}}</h1>
+                    <h1> - {{creditAward}} credit award</h1>
+                </div>
+                {{#each enrolledStudents}}
+                <div class="coursesContainer">
+                    <span>- {{name}}</span>
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </div>

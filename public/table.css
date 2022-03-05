@@ -1,0 +1,46 @@
+.container .title {
+    font-size: 1.5rem;
+    color: #FFCC1D
+}
+
+.container {
+    border: 1px solid #FFCC1D;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.container:hover {
+    box-shadow: 0 0 5px 5px yellow;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.subContainer {
+    border-top: 1px solid #FFCC1D;
+    max-height: 300px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    box-shadow: inset 0 5px 15px white;
+    text-align: left;
+    padding: 20px;
+    padding-left: 5%;
+}
+
+.subContainer .title {
+    display: inline-flex;
+}
+
+.subContainer .title h1 {
+    margin-right: 15px;
+}
+
+.coursesContainer span {
+    display: block;
+    font-size: 2rem;
+    color: #FFCC1D
+}
+
+.coursesContainer {
+    border-left: #FFCC1D solid 1px;
+    padding-left: 10px;
+}
